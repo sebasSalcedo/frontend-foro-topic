@@ -1,1 +1,128 @@
-<p>register works!</p>
+<div class="container w-75 mt-5 degradro">
+  <div class="row align-items-stretch">
+    <div class="col p-5 rounded-end form-efect">
+      <h2 class="fw-bold text-center pt-4 py-2 fw-lighter" style="color: black">
+        Registrate
+      </h2>
+      <hr />
+      <form class="was-validated" [formGroup]="registerForm" novalidate>
+        <div class="mb-4 position-relative" >
+         
+          <label class="form-label fw-bold" for="name">name</label>
+          <input
+            type="text"
+            class="form-control is-invalid"
+            name="name"
+            placeholder="Ingresa tu name"
+            autocomplete="off"
+            formControlName="name"
+          
+            required
+            #name
+          />
+
+          <span
+            *ngIf="
+              registerForm.controls['name'].invalid &&
+              (registerForm.controls['name'].dirty ||
+                registerForm.controls['name'].touched)
+            "
+            class="alert position-relative"
+          >
+            <span *ngIf="registerForm.controls['name'].errors.required">
+              Please enter username
+            </span>
+          </span>
+        </div>
+
+        <div class="mb-4">
+          <div class="mb-4">
+            <label class="form-label fw-bold" for="email">surname</label>
+            <input
+              type="text"
+              class="form-control"
+              name="surname"
+              placeholder="Ingresa tu surname"
+              autocomplete="off"
+              formControlName="surname"
+              #surname
+              required
+            />
+          </div>
+        </div>
+        <div class="mb-4">
+          <div class="mb-4">
+            <label class="form-label fw-bold" for="email">email</label>
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              placeholder="Ingresa tu Email"
+              autocomplete="off"
+              formControlName="email"
+              #email
+              required
+            />
+          </div>
+        </div>
+        <div class="mb-4">
+          <div class="mb-4">
+            <label class="form-label fw-bold" for="password">password</label>
+            <input
+              type="password"
+              class="form-control"
+              name="password"
+              placeholder="Ingresa tu password"
+              autocomplete="off"
+              formControlName="password"
+              #password
+              required
+            />
+          </div>
+        </div>
+
+        <div class="container w-100 my-5">
+          <div class="row text-center">
+            <div class="col-12 fw-bold">Registrate Con:</div>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-outline-primary w-100 my-1">
+                <div class="row align-items-center">
+                  <div class="col-2 d-none d-md-block">
+                    <img src="assets/fb.png" width="32" alt="" />
+                  </div>
+                  <div class="col-10 text-center col-md-10">Facebook</div>
+                </div>
+              </button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-danger w-100 my-1">
+                <div class="row align-items-center">
+                  <div class="col-2 d-none d-md-block">
+                    <img src="assets/google.png" width="32" alt="" />
+                  </div>
+                  <div class="col-10 col-md-10 text-center">Google</div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="d-grid">
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!registerForm.valid"
+            (click)="registerNewUser()"
+          >
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6"></div>
+  </div>
+</div>

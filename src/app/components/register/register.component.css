@@ -1,0 +1,22 @@
+
+
+.bg {
+    background-image: url("../../../assets/img-Logo.jpg");
+    background-position: center center;
+    background-size: 800px 800px;
+    background-repeat: no-repeat;
+  
+  }
+  
+  
+  
+  .form-efect {
+      background-color: rgba(255, 255, 255, 0.7);
+  
+  }
+  
+  .degradro{
+      background: linear-gradient(65deg, rgb(7, 26, 82) 3%, rgb(7, 26, 82) 40%, rgb(8, 105, 114) calc(40% + 1px), rgb(8, 105, 114) 60%, rgb(23, 185, 120) calc(60% + 1px), rgb(23, 185, 120) 68%, rgb(167, 255, 131) calc(68% + 1px), rgb(167, 255, 131) 100%)
+  }
+  
+  
